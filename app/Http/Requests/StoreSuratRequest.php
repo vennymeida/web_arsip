@@ -27,7 +27,7 @@ class StoreSuratRequest extends FormRequest
             'nomor_surat' => 'required|string|max:255',
             'kategori_surat' => 'required|exists:kategori_surats,id',
             'judul' => 'required|string|max:255',
-            'file_surat' => 'required|mimes:pdf|max:2048',
+            'file_surat' => 'nullable|mimes:pdf|max:2048',
         ];
     }
 
@@ -41,7 +41,7 @@ class StoreSuratRequest extends FormRequest
             'judul.required' => 'Judul surat harus diisi.',
             'judul.max' => 'Judul surat tidak boleh lebih dari :max karakter.',
             'file_surat.mimes' => 'File surat harus berupa file PDF.',
-            'file_surat.max' => 'Ukuran file surat tidak boleh lebih dari :max KB.',
+            'file_surat.max' => 'Ukuran file surat tidak boleh lebih dari :max 2 MB.',
         ];
     }
 }

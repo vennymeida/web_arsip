@@ -56,7 +56,7 @@ class KategoriSuratController extends Controller
      * @param  \App\Models\KategoriSurat  $kategoriSurat
      * @return \Illuminate\Http\Response
      */
-    public function show(KategoriSurat $kategoriSurat)
+    public function show(KategoriSurat $kategori)
     {
         //
     }
@@ -77,8 +77,13 @@ class KategoriSuratController extends Controller
      * @param  \App\Models\KategoriSurat  $kategoriSurat
      * @return \Illuminate\Http\Response
      */
-    public function destroy(KategoriSurat $kategoriSurat)
+    public function destroy(KategoriSurat $kategori)
     {
-        //
+        try {
+            $kategori->delete();
+            return redirect()->route('kategori.index')->with('success', 'Data Kategori Surat berhasil dihapus.');
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect()->route('kategori.index')->with('success', 'Data Kategori Surat berhasil dihapus.');
+        }
     }
 }

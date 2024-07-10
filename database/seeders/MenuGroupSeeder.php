@@ -19,13 +19,13 @@ class MenuGroupSeeder extends Seeder
         MenuGroup::insert(
             [
                 [
-                    'name' => 'Dashboard',
-                    'icon' => 'fas fa-tachometer-alt',
+                    'name' => 'About',
+                    'icon' => 'fas fa-user-tag',
                     'permission_name' => 'dashboard',
                 ],
                 [
                     'name' => 'Arsip',
-                    'icon' => 'fas fa-users',
+                    'icon' => 'fas fa-envelope',
                     'permission_name' => 'surat.management',
                 ],
                 [
@@ -33,11 +33,11 @@ class MenuGroupSeeder extends Seeder
                     'icon' => 'fas fa-bars',
                     'permisison_name' => 'kategori.surat.management',
                 ],
-                [
-                    'name' => 'About',
-                    'icon' => 'fas fa-user-tag',
-                    'permisison_name' => 'about.management',
-                ]
+                // [
+                //     'name' => 'About',
+                //     'icon' => 'fas fa-user-tag',
+                //     'permisison_name' => 'about.management',
+                // ]
             ]
         );
     }

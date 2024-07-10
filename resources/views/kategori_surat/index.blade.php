@@ -8,9 +8,8 @@
 
         </div>
         <div class="section-body">
-            <h2 class="section-title">Kategori Surat</h2>
             <h2 class="section-title">Berikut ini adalah kategori yang bisa digunakan untuk melabeli surat</h2>
-            <h2 class="section-title">Klik Tambah Pada Kolom Aksi Untuk Menampilkan</h2>
+            <h2 class="section-title">Klik Tambah Pada Kolom Aksi Untuk Menambahkan Kategori Baru</h2>
 
             <div class="row">
                 <div class="col-12">
@@ -21,7 +20,7 @@
                 <div class="col-12">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h4>Arsip Surat</h4>
+                            <h4>Kategori Surat</h4>
                         </div>
                         <div class="card-body">
                             <div class="show-search mb-3">

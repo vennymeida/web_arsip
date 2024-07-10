@@ -7,7 +7,6 @@
             <h1>About</h1>
         </div>
         <div class="section-body">
-            <h2 class="section-title">About the Application</h2>
 
             <div class="row">
                 <div class="col-12">
@@ -26,13 +25,12 @@
                                 <div class="profile-image">
                                     <img src="/assets/img/venny.jpg" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover;">
                                 </div>
-                                {{-- <img alt="image" src="/assets/img/venny.jpg" class="rounded-circle mr-1"> --}}
                                 <div class="profile-info">
-                                    <span>Aplikasi ini dibuat oleh:</span>
-                                    <span>Nama: Venny Meida Hersianty</span>
-                                    <span>Prodi: D4 Teknik Informatika</span>
-                                    <span>NIM: 2041720100</span>
-                                    <span>Tanggal: 10 Juli 2024</span>
+                                    <span><strong> Aplikasi ini dibuat oleh:</strong></span>
+                                    <span><strong>Nama:</strong> Venny Meida Hersianty</span>
+                                    <span><strong>Prodi:</strong> D4 Teknik Informatika</span>
+                                    <span><strong>NIM:</strong> 2041720100</span>
+                                    <span><strong>Tanggal:</strong> 10 Juli 2024</span>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +56,7 @@
         }
         .profile-image {
             width: 150px;
-            height: 150px;
+            height: 170px;
             background-color: #000;
             border-radius: 10%;
             display: flex;

@@ -82,7 +82,7 @@
                             Don't have an account? <a href="/register">Create One</a>
                         </div>
                         <div class="simple-footer">
-                            Copyright &copy; Stisla 2018
+                            Copyright &copy; 2024
                         </div>
                     </div>
                 </div>

@@ -8,8 +8,7 @@
 
         </div>
         <div class="section-body">
-            <h2 class="section-title">Arsip Surat</h2>
-            <h2 class="section-title">Berikut ini adalah surat - surat yang telah terbit dan diarsipkan</h2>
+            <h2 class="section-title">Berikut ini adalah surat - surat yang telah terbit dan diarsipkan.</h2>
             <h2 class="section-title">Klik Lihat Pada Kolom Aksi Untuk Menampilkan</h2>
 
             <div class="row">

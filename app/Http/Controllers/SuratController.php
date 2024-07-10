@@ -104,7 +104,7 @@ class SuratController extends Controller
             $surat->delete();
             return redirect()->route('surat.index')->with('success', 'Data Surat berhasil dihapus.');
         } catch (\Illuminate\Database\QueryException $e) {
-            return redirect()->route('surat.index')->with('success', 'Data Kelurahan dan Kecamatan berhasil dihapus.');
+            return redirect()->route('surat.index')->with('success', 'Data Surat berhasil dihapus.');
         }
     }
 }

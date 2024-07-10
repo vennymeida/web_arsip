@@ -28,4 +28,15 @@ class StoreKategoriSuratRequest extends FormRequest
             'keterangan' => 'nullable|string'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'nama_kategori.required' => 'Nama kategori wajib diisi.',
+            'nama_kategori.string' => 'Nama kategori harus berupa teks.',
+            'nama_kategori.max' => 'Nama kategori tidak boleh lebih dari 255 karakter.',
+
+            'keterangan.string' => 'Keterangan harus berupa teks jika diisi.',
+        ];
+    }
 }

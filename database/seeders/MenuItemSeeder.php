@@ -19,7 +19,7 @@ class MenuItemSeeder extends Seeder
         MenuItem::insert(
             [
                 [
-                    'name' => 'Dashboard',
+                    'name' => 'About',
                     'route' => 'dashboard',
                     'permission_name' => 'dashboard',
                     'menu_group_id' => 1,
@@ -36,12 +36,12 @@ class MenuItemSeeder extends Seeder
                     'permission_name' => 'kategori.index',
                     'menu_group_id' => 3,
                 ],
-                [
-                    'name' => 'About',
-                    'route' => 'about-management/about',
-                    'permission_name' => 'about.index',
-                    'menu_group_id' => 4,
-                ],
+                // [
+                //     'name' => 'About',
+                //     'route' => 'about-management/about',
+                //     'permission_name' => 'about.index',
+                //     'menu_group_id' => 4,
+                // ],
             ]
         );
     }

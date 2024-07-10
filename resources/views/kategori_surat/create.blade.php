@@ -41,7 +41,7 @@
                                     @enderror
                                 </div>
                                 <button type="submit" class="btn btn-primary">Simpan</button>
-                                <a href="{{ route('kategori.index') }}" class="btn btn-secondary">Batal</a>
+                                <a href="{{ route('kategori.index') }}" class="btn btn-secondary">Kembali</a>
                             </form>
                         </div>
                     </div>

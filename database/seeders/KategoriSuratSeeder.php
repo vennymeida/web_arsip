@@ -16,11 +16,10 @@ class KategoriSuratSeeder extends Seeder
     public function run()
     {
         $kategories = [
+            ['nama_kategori' => 'Undangan'],
             ['nama_kategori' => 'Pengumuman'],
             ['nama_kategori' => 'Nota Dinas'],
-            ['nama_kategori' => 'Surat Keputusan'],
-            ['nama_kategori' => 'Surat Perintah'],
-            ['nama_kategori' => 'Surat Tugas']
+            ['nama_kategori' => 'Pemberitahuan']
         ];
 
         foreach ($kategories as $kategori) {
