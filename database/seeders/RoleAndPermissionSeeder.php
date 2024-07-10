@@ -22,16 +22,17 @@ class RoleAndPermissionSeeder extends Seeder
 
         // create permissions
         Permission::create(['name' => 'dashboard']);
-        Permission::create(['name' => 'user.management']);
+        Permission::create(['name' => 'surat.management']);
         Permission::create(['name' => 'role.permission.management']);
         Permission::create(['name' => 'menu.management']);
         //user
-        Permission::create(['name' => 'user.index']);
-        Permission::create(['name' => 'user.create']);
-        Permission::create(['name' => 'user.edit']);
-        Permission::create(['name' => 'user.destroy']);
-        Permission::create(['name' => 'user.import']);
-        Permission::create(['name' => 'user.export']);
+        Permission::create(['name' => 'surat.index']);
+        Permission::create(['name' => 'surat.create']);
+        Permission::create(['name' => 'surat.edit']);
+        Permission::create(['name' => 'surat.destroy']);
+        Permission::create(['name' => 'surat.show']);
+        Permission::create(['name' => 'surat.import']);
+        Permission::create(['name' => 'surat.export']);
 
         //role
         Permission::create(['name' => 'role.index']);
@@ -60,24 +61,24 @@ class RoleAndPermissionSeeder extends Seeder
         Permission::create(['name' => 'assign.user.create']);
         Permission::create(['name' => 'assign.user.edit']);
 
-        //menu group 
+        //menu group
         Permission::create(['name' => 'menu-group.index']);
         Permission::create(['name' => 'menu-group.create']);
         Permission::create(['name' => 'menu-group.edit']);
         Permission::create(['name' => 'menu-group.destroy']);
 
-        //menu item 
+        //menu item
         Permission::create(['name' => 'menu-item.index']);
         Permission::create(['name' => 'menu-item.create']);
         Permission::create(['name' => 'menu-item.edit']);
         Permission::create(['name' => 'menu-item.destroy']);
 
-        // create roles 
+        // create roles
         $roleUser = Role::create(['name' => 'user']);
         $roleUser->givePermissionTo([
             'dashboard',
-            'user.management',
-            'user.index',
+            'surat.management',
+            'surat.index',
         ]);
 
         // create Super Admin

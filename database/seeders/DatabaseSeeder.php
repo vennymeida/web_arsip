@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             MenuGroupSeeder::class,
             MenuItemSeeder::class,
             CategorySeeder::class,
+            SuratSeeder::class,
+            KategoriSuratSeeder::class,
         ]);
     }
 }

@@ -11,6 +11,7 @@ use App\Http\Controllers\RoleAndPermission\ImportPermissionController;
 use App\Http\Controllers\RoleAndPermission\ImportRoleController;
 use App\Http\Controllers\RoleAndPermission\PermissionController;
 use App\Http\Controllers\RoleAndPermission\RoleController;
+use App\Http\Controllers\SuratController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use App\Http\Controllers\UserController;
@@ -37,11 +38,16 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     });
     //user list
 
-    Route::prefix('user-management')->group(function () {
-        Route::resource('user', UserController::class);
-        Route::post('import', [UserController::class, 'import'])->name('user.import');
-        Route::get('export', [UserController::class, 'export'])->name('user.export');
-        Route::get('demo', DemoController::class)->name('user.demo');
+    // Route::prefix('user-management')->group(function () {
+    //     Route::resource('user', UserController::class);
+    //     Route::post('import', [UserController::class, 'import'])->name('user.import');
+    //     Route::get('export', [UserController::class, 'export'])->name('user.export');
+    //     Route::get('demo', DemoController::class)->name('user.demo');
+    // });
+
+    Route::prefix('surat-management')->group(function () {
+        Route::get('/surats/{surat}/download', [SuratController::class, 'download'])->name('surats.download');
+        Route::resource('surat', SuratController::class);
     });
 
     Route::prefix('menu-management')->group(function () {

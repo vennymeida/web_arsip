@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Web-Arsip'),
 
     /*
     |--------------------------------------------------------------------------
@@ -69,7 +69,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Jakarta',
 
     /*
     |--------------------------------------------------------------------------
@@ -180,7 +180,7 @@ return [
         App\Providers\FortifyServiceProvider::class,
         //spatie
         Spatie\Permission\PermissionServiceProvider::class,
-        
+
 
     ],
 

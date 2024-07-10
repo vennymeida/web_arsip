@@ -24,18 +24,18 @@ class MenuGroupSeeder extends Seeder
                     'permission_name' => 'dashboard',
                 ],
                 [
-                    'name' => 'Users Management',
+                    'name' => 'Arsip',
                     'icon' => 'fas fa-users',
-                    'permission_name' => 'user.management',
+                    'permission_name' => 'surat.management',
                 ],
                 [
-                    'name' => 'Role Management',
-                    'icon' => 'fas fa-user-tag',
+                    'name' => 'Kategori Surat',
+                    'icon' => 'fas fa-bars',
                     'permisison_name' => 'role.permission.management',
                 ],
                 [
-                    'name' => 'Menu Management',
-                    'icon' => 'fas fa-bars',
+                    'name' => 'About',
+                    'icon' => 'fas fa-user-tag',
                     'permisison_name' => 'menu.management',
                 ]
             ]

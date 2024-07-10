@@ -25,9 +25,9 @@ class MenuItemSeeder extends Seeder
                     'menu_group_id' => 1,
                 ],
                 [
-                    'name' => 'User List',
-                    'route' => 'user-management/user',
-                    'permission_name' => 'user.index',
+                    'name' => 'Arsip Surat',
+                    'route' => 'surat-management/surat',
+                    'permission_name' => 'surat.index',
                     'menu_group_id' => 2,
                 ],
                 [
