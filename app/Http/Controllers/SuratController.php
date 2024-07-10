@@ -56,20 +56,31 @@ class SuratController extends Controller
 
     public function edit(Surat $surat)
     {
+        $kategories = KategoriSurat::all();
         // Menampilkan form untuk mengedit surat
-        return view('surats.edit', compact('surat'));
+        return view('surats.edit', compact('surat', 'kategories'));
     }
 
     public function update(UpdateSuratRequest $request, Surat $surat)
     {
         // Validasi data yang diterima dari form
-        $validatedData = $request->validated();
+    $validatedData = $request->validated();
 
-        // Mengupdate surat dengan data yang telah divalidasi
-        $surat->update($validatedData);
+    // Handle file upload jika ada
+    if ($request->hasFile('file_surat')) {
+        // Hapus file lama jika ada
+        if ($surat->file_surat) {
+            Storage::delete($surat->file_surat);
+        }
+        // Upload file baru
+        $validatedData['file_surat'] = $request->file('file_surat')->store('surat_files', 'public');
+    }
 
-        // Mengarahkan kembali ke halaman index dengan pesan sukses
-        return redirect()->route('surats.index')->with('success', 'Surat berhasil diperbarui.');
+    // Mengupdate surat dengan data yang telah divalidasi
+    $surat->update($validatedData);
+
+    // Mengarahkan kembali ke halaman index dengan pesan sukses
+    return redirect()->route('surat.index')->with('success', 'Surat berhasil diperbarui.');
     }
 
     public function download(Surat $surat)

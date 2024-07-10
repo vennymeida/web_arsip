@@ -13,7 +13,7 @@ class UpdateSuratRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class UpdateSuratRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nomor_surat' => 'required|string|max:255',
+            'kategori_surat' => 'required|exists:kategori_surats,id',
+            'judul' => 'required|string|max:255',
+            'file_surat' => 'nullable|file|mimes:pdf|max:2048', // Ubah sesuai kebutuhan
         ];
     }
+
 }

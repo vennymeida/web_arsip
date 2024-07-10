@@ -63,7 +63,7 @@
                                                 <td>{{ $surat->kategoriSurat->nama_kategori }}</td>
                                                 <td>{{ $surat->judul }}</td>
                                                 <td>{{ $surat->waktu_pengarsipan }}</td>
-                                                <td class="text-right">
+                                                <td class="text-center">
                                                     <div class="d-flex justify-content-end">
                                                         <a href="{{ route('surat.show', $surat->id) }}"
                                                             class="btn btn-sm btn-info btn-icon "><i class="fas fa-eye"></i>
