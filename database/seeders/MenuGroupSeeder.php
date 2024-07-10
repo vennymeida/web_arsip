@@ -31,12 +31,12 @@ class MenuGroupSeeder extends Seeder
                 [
                     'name' => 'Kategori Surat',
                     'icon' => 'fas fa-bars',
-                    'permisison_name' => 'role.permission.management',
+                    'permisison_name' => 'kategori.surat.management',
                 ],
                 [
                     'name' => 'About',
                     'icon' => 'fas fa-user-tag',
-                    'permisison_name' => 'menu.management',
+                    'permisison_name' => 'about.management',
                 ]
             ]
         );

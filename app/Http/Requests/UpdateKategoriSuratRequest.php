@@ -13,7 +13,7 @@ class UpdateKategoriSuratRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class UpdateKategoriSuratRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nama_kategori' => 'required|string|max:255',
+            'keterangan' => 'nullable|string'
         ];
     }
 }

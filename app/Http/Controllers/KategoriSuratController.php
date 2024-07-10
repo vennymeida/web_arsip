@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\KategoriSurat;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreKategoriSuratRequest;
 use App\Http\Requests\UpdateKategoriSuratRequest;
 
@@ -13,9 +14,17 @@ class KategoriSuratController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $query = KategoriSurat::query();
+
+        if ($request->has('nama_kategori')) {
+            $search = $request->input('nama_kategori');
+            $query->where('nama_kategori', 'like', '%' . $search . '%');
+        }
+
+        $kategoriSurats = $query->paginate(10);
+        return view('kategori_surat.index', compact('kategoriSurats'));
     }
 
     /**
@@ -25,7 +34,8 @@ class KategoriSuratController extends Controller
      */
     public function create()
     {
-        //
+        $nextId = KategoriSurat::max('id') + 1;
+        return view('kategori_surat.create', compact('nextId'));
     }
 
     /**
@@ -36,7 +46,8 @@ class KategoriSuratController extends Controller
      */
     public function store(StoreKategoriSuratRequest $request)
     {
-        //
+        KategoriSurat::create($request->validated());
+        return redirect()->route('kategori.index')->with('success', 'Kategori Surat Berhasil Ditambahkan.');
     }
 
     /**
@@ -50,29 +61,16 @@ class KategoriSuratController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\KategoriSurat  $kategoriSurat
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(KategoriSurat $kategoriSurat)
+    public function edit(KategoriSurat $kategori)
     {
-        //
+        return view('kategori_surat.edit', compact('kategori'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateKategoriSuratRequest  $request
-     * @param  \App\Models\KategoriSurat  $kategoriSurat
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateKategoriSuratRequest $request, KategoriSurat $kategoriSurat)
+    public function update(UpdateKategoriSuratRequest $request, KategoriSurat $kategori)
     {
-        //
+        $kategori->update($request->validated());
+        return redirect()->route('kategori.index')->with('success', 'Kategori Surat Berhasil Diperbarui.');
     }
-
     /**
      * Remove the specified resource from storage.
      *
